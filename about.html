@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #282c34);
+            color: #f0f0f0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #000000;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .navbar .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links .nav-link {
+            color: #f0f0f0;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar .nav-links .nav-link:hover {
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+        }
+
+        .auth-buttons {
+            display: flex;
+        }
+
+        .auth-buttons button {
+            background-color: #61dafb;
+            color: #1e1e1e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #4a90e2;
+            transform: scale(1.05);
+        }
+
+        /* About Us Section */
+        .about-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(40, 44, 52, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-section h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #f0f0f0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-section p:first-of-type {
+            margin-top: 0;
+        }
+
+        .about-section p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .about-section p br {
+            content: " ";
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .auth-buttons {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://dynamic.brandcrowd.com/preview/logodraft/8a020b9f-1184-4a2f-b62c-162dba8d4292/image/large.png" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="signup-btn" onclick="redirect()">Sign Up</button>
+            <button class="register-btn" >Register</button>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Welcome to Best Phones, your number one source for mobile phones and accessories. We're dedicated to giving
+            you the very best of products, with a focus on quality, customer service, and uniqueness.</p>
+        <p>Founded in 2024 by Adish, Best Phones has come a long way from its beginnings in a home office. When Adish
+            first started out, his passion for providing the best equipment for his fellow tech enthusiasts drove him to
+            quit his day job, and gave him the impetus to turn hard work and inspiration into a booming online store. We
+            now serve customers all over the world, and are thrilled to be a part of the tech wing of the e-commerce
+            industry.</p>
+        <p>We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or
+            comments, please don't hesitate to contact us.</p>
+        <p>Sincerely, <br> Adish, Founder</p>
+    </div>
+</body>
+<script>
+    function redirect() {
+        window.location.href = "signup.html";
+        }
+</script>
+</html>

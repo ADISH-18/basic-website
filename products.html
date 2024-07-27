@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #282c34);
+            color: #f0f0f0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #000000;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .navbar .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links .nav-link {
+            color: #f0f0f0;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar .nav-links .nav-link:hover {
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+        }
+
+        .auth-buttons {
+            display: flex;
+        }
+
+        .auth-buttons button {
+            background-color: #61dafb;
+            color: #1e1e1e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #4a90e2;
+            transform: scale(1.05);
+        }
+
+        /* Products section styles */
+        .products-page {
+            padding: 20px;
+        }
+
+        .products-page h1 {
+            text-align: center;
+            color: #61dafb;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .product-section {
+            margin-bottom: 40px;
+        }
+
+        .product-section h2 {
+            color: #f0f0f0;
+            font-size: 28px;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-carousel {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+            width: calc(33.333% - 20px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            padding: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-card h3 {
+            color: #61dafb;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #f0f0f0;
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .auth-buttons {
+                flex-direction: column;
+            }
+
+            .product-card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://dynamic.brandcrowd.com/preview/logodraft/8a020b9f-1184-4a2f-b62c-162dba8d4292/image/large.png" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="signup-btn" onclick="redirect()">Sign Up</button>
+            <button class="register-btn" >Register</button>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="products-page">
+        <h1>Our Products</h1>
+
+        <div class="product-section">
+            <h2>Mobile Phones</h2>
+            <div class="product-carousel d-flex justify-content-center">
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Phone 1">
+                    <h3>Samsung</h3>
+                    <p>Rs.499.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Phone 2">
+                    <h3>Motorola</h3>
+                    <p>Rs.599.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1042143/pexels-photo-1042143.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Phone 3">
+                    <h3>Iphone</h3>
+                    <p>Rs.699.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Phone Cases</h2>
+            <div class="product-carousel d-flex justify-content-center">
+                <div class="product-card">
+                    <img src="https://animemart.in/cdn/shop/collections/Bhaukaal_Store_Onepiece_Collection_Banner.jpg?v=1691171731&width=600"
+                        alt="Case 1">
+                    <h3>Luffy</h3>
+                    <p>Rs.19.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://animemart.in/cdn/shop/collections/Jujutsu_Kaisen_Phone_Case_Collection.jpg?v=1689617524&width=600"
+                        alt="Case 2">
+                    <h3>sukuna</h3>
+                    <p>Rs.24.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://animemart.in/cdn/shop/collections/One_Punch_Phone_Case_Collection.jpg?v=1696069728&width=600"
+                        alt="Case 3">
+                    <h3>Saitama</h3>
+                    <p>Rs.29.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://animemart.in/cdn/shop/collections/Demon_Slayer_Collection_Banner.jpg?v=1686220268&width=600"
+                        alt="Case 3">
+                    <h3>Zenitsu</h3>
+                    <p>Rs.29.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Other Accessories</h2>
+            <div class="product-carousel d-flex justify-content-center">
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1646704/pexels-photo-1646704.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Accessory 1">
+                    <h3>Accessory 1</h3>
+                    <p>Rs.49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/4219862/pexels-photo-4219862.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Accessory 2">
+                    <h3>Accessory 2</h3>
+                    <p>Rs.59.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Accessory 3">
+                    <h3>Accessory 3</h3>
+                    <p>Rs.69.99</p>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    function redirect() {
+        window.location.href = "signup.html";
+        }
+</script>
+
+</html>

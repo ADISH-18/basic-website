@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #282c34);
+            color: #f0f0f0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #000000;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .navbar .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links .nav-link {
+            color: #f0f0f0;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar .nav-links .nav-link:hover {
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+        }
+
+        .auth-buttons {
+            display: flex;
+        }
+
+        .auth-buttons button {
+            background-color: #61dafb;
+            color: #1e1e1e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #4a90e2;
+            transform: scale(1.05);
+        }
+
+        /* Service Page Styles*/
+        .services-page {
+            padding: 20px;
+            background: #121212;
+        }
+
+        .services-page h1 {
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-item h2 {
+            color: #61dafb;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://dynamic.brandcrowd.com/preview/logodraft/8a020b9f-1184-4a2f-b62c-162dba8d4292/image/large.png"
+                alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="signup-btn" onclick="redirect()">Sign Up</button>
+            <button class="register-btn">Register</button>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-page">
+        <h1>Our Services</h1>
+        <div class="services-list">
+            <div class="service-item">
+                <h2>Tech Support</h2>
+                <p>We offer 24/7 tech support for all our products. Contact us anytime for assistance.</p>
+            </div>
+            <div class="service-item">
+                <h2>Product Warranty</h2>
+                <p>All our products come with a 1-year warranty. Ensure your tech investment is protected.</p>
+            </div>
+            <div class="service-item">
+                <h2>Custom Orders</h2>
+                <p>We offer customization for certain products. Contact us to place a custom order.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirect() {
+            window.location.href = "signup.html";
+        }
+    </script>
+</body>
+
+</html>
